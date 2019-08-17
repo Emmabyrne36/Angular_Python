@@ -1,8 +1,9 @@
 <div class="container">
   <h1>Simple App with Angular and Python</h1>
+  <br>
   <button class="btn btn-primary" (click)="getAllEmployees()">Get all employees</button>
-  
-  <ul *ngFor="let emp of employees">
-    <li>{{ emp.id }}: {{ emp.name }}</li>
+  <br><br>
+  <ul class="list-group">
+    <li class="list-group-item" *ngFor="let emp of employees">{{ emp.id }}: {{ emp.name }}</li>
   </ul>
 </div>

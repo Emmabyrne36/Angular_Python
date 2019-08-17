@@ -18,14 +18,12 @@ def hello():
 
 class Employees(Resource):
     def get(self):
-        return employees
+        return employees['employees']
 
 class Employees_Name(Resource):
     def get(self, employee_id):
         # result = {'data': {'id': 1, 'name': 'Emma'}}
-        print(employee_id)
         result = [emp for emp in employees['employees'] if emp['id'] == int(employee_id)]
-        print("restult is ", result)
         return jsonify(result)
 
 api.add_resource(Employees, '/employees') # Route_1
